@@ -1,0 +1,27 @@
+diff --git a/axml.c b/axml.c
+index e480525..1e2d750 100644
+--- a/axml.c
++++ b/axml.c
+@@ -67,11 +67,11 @@
+ #endif
+ 
+ #if ! (defined(__ppc) || defined(__powerpc__) || defined(__POWERPC__) || defined(PPC) || defined(__aarch64__))
+-#include <xmmintrin.h>
++#include "sse_shim.h"
+ /*
+   special bug fix, enforces denormalized numbers to be flushed to zero,
+   without this program is a tiny bit faster though.
+-  #include <emmintrin.h> 
++  #include "sse_shim.h" 
+   #define MM_DAZ_MASK    0x0040
+   #define MM_DAZ_ON    0x0040
+   #define MM_DAZ_OFF    0x0000
+@@ -13709,7 +13709,7 @@ int main (int argc, char *argv[])
+     
+     
+     
+-#if ! (defined(__ppc) || defined(__powerpc__) || defined(__POWERPC__) || defined(PPC))
++#if defined(__x86_64__) || defined(__i386__)
+     
+     /* 
+        David Defour's command  
