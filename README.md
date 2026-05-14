@@ -1,6 +1,6 @@
 # RISC-V HPC Application Porting
 
-Native RISC-V porting of HPC applications from the [LFX RISC-V target spreadsheet](https://docs.google.com/spreadsheets/d/1Tia9n_MUdVbcnmjlBBV52bBVcJRIBCjALe9FkwvSIoQ/), performed inside a `riscv64/ubuntu:24.04` Docker container on Apple Silicon (M1). All binaries were compiled natively on RISC-V — not cross-compiled from x86.
+Native RISC-V porting of HPC applications from the [LFX RISC-V target spreadsheet](https://tinyurl.com/4v22ujvt), performed inside a `riscv64/ubuntu:24.04` Docker container on Apple Silicon (M1). All binaries were compiled natively on RISC-V — not cross-compiled from x86.
 
 This repository is the supporting evidence for my LFX Mentorship application proposal:  
 **[Broadening the RISC-V High Precision Code Base and Reach](lfx_proposal.md)**
