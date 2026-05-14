@@ -1,0 +1,25 @@
+rm -f *.o raxmlHPC
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o axml.o axml.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o optimizeModel.o optimizeModel.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o multiple.o multiple.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o searchAlgo.o searchAlgo.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o topologies.o topologies.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o parsePartitions.o parsePartitions.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o treeIO.o treeIO.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o models.o models.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o bipartitionList.o bipartitionList.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o rapidBootstrap.o rapidBootstrap.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o evaluatePartialGenericSpecial.o evaluatePartialGenericSpecial.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o evaluateGenericSpecial.o evaluateGenericSpecial.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o newviewGenericSpecial.o newviewGenericSpecial.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o makenewzGenericSpecial.o makenewzGenericSpecial.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o classify.o classify.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o fastDNAparsimony.o fastDNAparsimony.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o fastSearch.o fastSearch.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o leaveDropping.o leaveDropping.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o rmqs.o rmqs.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o rogueEPA.o rogueEPA.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o ancestralStates.o ancestralStates.c
+gcc  -D_GNU_SOURCE -fomit-frame-pointer -funroll-loops -O2     -c -o mem_alloc.o mem_alloc.c
+gcc  -c -o eigen.o eigen.c 
+gcc  -o raxmlHPC axml.o  optimizeModel.o multiple.o searchAlgo.o topologies.o parsePartitions.o treeIO.o models.o bipartitionList.o rapidBootstrap.o evaluatePartialGenericSpecial.o evaluateGenericSpecial.o newviewGenericSpecial.o makenewzGenericSpecial.o   classify.o fastDNAparsimony.o fastSearch.o leaveDropping.o rmqs.o rogueEPA.o ancestralStates.o  mem_alloc.o  eigen.o -lm  

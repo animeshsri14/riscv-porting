@@ -1,0 +1,55 @@
+loading initial cache file ../cmake/presets/nolib.cmake
+CMake Deprecation Warning at CMakeLists.txt:22 (cmake_policy):
+  The OLD behavior for policy CMP0109 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+-- Running check for auto-generated files from make-based build system
+-- Found MPI_CXX: /usr/bin/mpicxx (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1") found components: CXX 
+-- Looking for C++ include omp.h
+-- Looking for C++ include omp.h - found
+-- Found GZIP: /usr/bin/gzip  
+-- Generating style headers...
+-- Generating package headers...
+-- Generating lmpinstalledpkgs.h...
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- The following tools and libraries have been found and configured:
+ * Git
+ * MPI
+ * Python3
+
+-- <<< Build configuration >>>
+   LAMMPS Version:   2026.3.30.99 b6a1e33
+   Operating System: Linux Ubuntu" 24.04
+   CMake Version:    3.28.3
+   Build type:       Release
+   Install path:     /root/.local
+   Generator:        Unix Makefiles using /usr/bin/gmake
+-- Enabled packages: <None>
+-- <<< Compilers and Flags: >>>
+-- C++ Compiler:     /usr/bin/mpicxx
+      Type:          GNU
+      Version:       13.3.0
+      C++ Standard:  17
+      C++ Flags:    -march=rv64gc -O3 -DNDEBUG
+      Defines:       LAMMPS_SMALLBIG;LAMMPS_MEMALIGN=64;LAMMPS_GZIP
+-- C compiler:       /usr/bin/mpicc
+      Type:          GNU
+      Version:       13.3.0
+      C Flags:       -O3 -DNDEBUG
+-- <<< Linker flags: >>>
+-- Executable name:  lmp
+-- Static library flags:    
+-- <<< MPI flags >>>
+-- MPI_defines:      MPICH_SKIP_MPICXX;OMPI_SKIP_MPICXX;_MPICC_H
+-- MPI includes:     
+-- MPI libraries:    ;
+-- Configuring done (48.1s)
+-- Generating done (1.1s)
+-- Build files have been written to: /workspace/repos/lammps/build-riscv

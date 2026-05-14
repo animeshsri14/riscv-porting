@@ -1,0 +1,351 @@
+mpicc -Drestrict=__restrict__ -O3 -DGRAPH_GENERATOR_MPI -DREUSE_CSR_FOR_VALIDATION -DSSSP -lpthread -fcommon -I../aml -lpthread -o graph500_reference_bfs bfs_reference.c csr_reference.c main.c utils.c validate.c ../aml/aml.c ../generator/graph_generator.c ../generator/make_graph.c ../generator/splittable_mrg.c ../generator/utils.c -lm
+validate.c: In function 'edgepreddisthndl':
+validate.c:122:34: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 3 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~      ~~
+      |                                                                                                                                  |
+      |                                                                                                                                  int64_t {aka long int}
+validate.c:143:70: note: in expansion of macro 'DUMPERROR'
+  143 |         if((predv0==-1 && predv1!=-1) || (predv1==-1 && predv0!=-1)) DUMPERROR("edge connecting visited and unvisited vertices");
+      |                                                                      ^~~~~~~~~
+validate.c:122:65: note: format string is defined here
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                                              ~~~^
+      |                                                                 |
+      |                                                                 long long unsigned int
+      |                                                              %lu
+validate.c:122:34: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 4 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         ~~
+      |                                                                                                                                     |
+      |                                                                                                                                     int64_t {aka long int}
+validate.c:143:70: note: in expansion of macro 'DUMPERROR'
+  143 |         if((predv0==-1 && predv1!=-1) || (predv1==-1 && predv0!=-1)) DUMPERROR("edge connecting visited and unvisited vertices");
+      |                                                                      ^~~~~~~~~
+validate.c:122:70: note: format string is defined here
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                                                   ~~~^
+      |                                                                      |
+      |                                                                      long long unsigned int
+      |                                                                   %lu
+validate.c:122:34: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 6 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~              ~~~~~~
+      |                                                                                                                                          |
+      |                                                                                                                                          int64_t {aka long int}
+validate.c:143:70: note: in expansion of macro 'DUMPERROR'
+  143 |         if((predv0==-1 && predv1!=-1) || (predv1==-1 && predv0!=-1)) DUMPERROR("edge connecting visited and unvisited vertices");
+      |                                                                      ^~~~~~~~~
+validate.c:122:91: note: format string is defined here
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                                                                        ~~~^
+      |                                                                                           |
+      |                                                                                           long long unsigned int
+      |                                                                                        %lu
+validate.c:122:34: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 7 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                     ~~~~~~
+      |                                                                                                                                                 |
+      |                                                                                                                                                 int64_t {aka long int}
+validate.c:143:70: note: in expansion of macro 'DUMPERROR'
+  143 |         if((predv0==-1 && predv1!=-1) || (predv1==-1 && predv0!=-1)) DUMPERROR("edge connecting visited and unvisited vertices");
+      |                                                                      ^~~~~~~~~
+validate.c:122:102: note: format string is defined here
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                                                                                   ~~~^
+      |                                                                                                      |
+      |                                                                                                      long long unsigned int
+      |                                                                                                   %lu
+validate.c:122:34: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 3 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~      ~~
+      |                                                                                                                                  |
+      |                                                                                                                                  int64_t {aka long int}
+validate.c:146:50: note: in expansion of macro 'DUMPERROR'
+  146 |         if(distv0+w < distv1 || distv1+w<distv0) DUMPERROR("triangle rule violated");
+      |                                                  ^~~~~~~~~
+validate.c:122:65: note: format string is defined here
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                                              ~~~^
+      |                                                                 |
+      |                                                                 long long unsigned int
+      |                                                              %lu
+validate.c:122:34: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 4 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         ~~
+      |                                                                                                                                     |
+      |                                                                                                                                     int64_t {aka long int}
+validate.c:146:50: note: in expansion of macro 'DUMPERROR'
+  146 |         if(distv0+w < distv1 || distv1+w<distv0) DUMPERROR("triangle rule violated");
+      |                                                  ^~~~~~~~~
+validate.c:122:70: note: format string is defined here
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                                                   ~~~^
+      |                                                                      |
+      |                                                                      long long unsigned int
+      |                                                                   %lu
+validate.c:122:34: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 6 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~              ~~~~~~
+      |                                                                                                                                          |
+      |                                                                                                                                          int64_t {aka long int}
+validate.c:146:50: note: in expansion of macro 'DUMPERROR'
+  146 |         if(distv0+w < distv1 || distv1+w<distv0) DUMPERROR("triangle rule violated");
+      |                                                  ^~~~~~~~~
+validate.c:122:91: note: format string is defined here
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                                                                        ~~~^
+      |                                                                                           |
+      |                                                                                           long long unsigned int
+      |                                                                                        %lu
+validate.c:122:34: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 7 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                     ~~~~~~
+      |                                                                                                                                                 |
+      |                                                                                                                                                 int64_t {aka long int}
+validate.c:146:50: note: in expansion of macro 'DUMPERROR'
+  146 |         if(distv0+w < distv1 || distv1+w<distv0) DUMPERROR("triangle rule violated");
+      |                                                  ^~~~~~~~~
+validate.c:122:102: note: format string is defined here
+  122 | #define DUMPERROR(text) { printf("Validation Error: %s, edge %llu %llu weight %f pred0 %llu pred1 %llu dist0 %f dist1 %f\n",text,v0,v1,w,predv0,predv1,distv0,distv1); val_errors++; return; }
+      |                                                                                                   ~~~^
+      |                                                                                                      |
+      |                                                                                                      long long unsigned int
+      |                                                                                                   %lu
+validate.c: In function 'validate_result':
+validate.c:260:58: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 2 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  260 |                 printf("Validation Error: predecessor %llu of vertex %llu is out of range\n",pred[i],VERTEX_TO_GLOBAL(my_pe(),i)),val_errors++;
+      |                                                       ~~~^                                   ~~~~~~~
+      |                                                          |                                       |
+      |                                                          long long unsigned int                  int64_t {aka long int}
+      |                                                       %lu
+validate.c:260:73: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 3 has type 'long int' [-Wformat=]
+  260 |                 printf("Validation Error: predecessor %llu of vertex %llu is out of range\n",pred[i],VERTEX_TO_GLOBAL(my_pe(),i)),val_errors++;
+      |                                                                      ~~~^
+      |                                                                         |
+      |                                                                         long long unsigned int
+      |                                                                      %lu
+validate.c:269:77: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 3 has type 'long int' [-Wformat=]
+  269 |                 printf("Validation Error: distance/depth %3.2f of vertex %llu is out of range\n",dist[i],VERTEX_TO_GLOBAL(my_pe(),i)),val_errors++;
+      |                                                                          ~~~^
+      |                                                                             |
+      |                                                                             long long unsigned int
+      |                                                                          %lu
+validate.c:271:53: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 2 has type 'long int' [-Wformat=]
+  271 |                 printf("Validation Error: vertex %llu has inconsistent predecessor %llu and distance %f\n",VERTEX_TO_GLOBAL(my_pe(),i),pred[i],dist[i]),val_errors++;
+      |                                                  ~~~^
+      |                                                     |
+      |                                                     long long unsigned int
+      |                                                  %lu
+validate.c:271:87: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 3 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  271 |                 printf("Validation Error: vertex %llu has inconsistent predecessor %llu and distance %f\n",VERTEX_TO_GLOBAL(my_pe(),i),pred[i],dist[i]),val_errors++;
+      |                                                                                    ~~~^                                                ~~~~~~~
+      |                                                                                       |                                                    |
+      |                                                                                       long long unsigned int                               int64_t {aka long int}
+      |                                                                                    %lu
+validate.c:277:58: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 2 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  277 |                 printf("Validation Error: root vertex %llu has predecessor %llu and distance %f\n",root,pred[vloc],dist[vloc]),val_errors++;
+      |                                                       ~~~^                                         ~~~~
+      |                                                          |                                         |
+      |                                                          long long unsigned int                    int64_t {aka long int}
+      |                                                       %lu
+validate.c:277:79: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 3 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  277 |                 printf("Validation Error: root vertex %llu has predecessor %llu and distance %f\n",root,pred[vloc],dist[vloc]),val_errors++;
+      |                                                                            ~~~^                         ~~~~~~~~~~
+      |                                                                               |                             |
+      |                                                                               long long unsigned int        int64_t {aka long int}
+      |                                                                            %lu
+validate.c:291:61: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 2 has type 'long int' [-Wformat=]
+  291 |                 printf("Validation Error: path to vertex %llu not confirmed from predecessor %llu with distance %f\n",VERTEX_TO_GLOBAL(my_pe(),i),pred[i],dist[i]),val_errors++;
+      |                                                          ~~~^
+      |                                                             |
+      |                                                             long long unsigned int
+      |                                                          %lu
+validate.c:291:97: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 3 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  291 |                 printf("Validation Error: path to vertex %llu not confirmed from predecessor %llu with distance %f\n",VERTEX_TO_GLOBAL(my_pe(),i),pred[i],dist[i]),val_errors++;
+      |                                                                                              ~~~^                                                 ~~~~~~~
+      |                                                                                                 |                                                     |
+      |                                                                                                 long long unsigned int                                int64_t {aka long int}
+      |                                                                                              %lu
+validate.c:296:60: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 2 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  296 |         printf("Validation Error: wrong nedge_traversed %llu (correct number is %llu)\n",*nedges_in,nedges_traversed),val_errors++;
+      |                                                         ~~~^                             ~~~~~~~~~~
+      |                                                            |                             |
+      |                                                            long long unsigned int        int64_t {aka long int}
+      |                                                         %lu
+validate.c:296:84: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 3 has type 'int64_t' {aka 'long int'} [-Wformat=]
+  296 |         printf("Validation Error: wrong nedge_traversed %llu (correct number is %llu)\n",*nedges_in,nedges_traversed),val_errors++;
+      |                                                                                 ~~~^                ~~~~~~~~~~~~~~~~
+      |                                                                                    |                |
+      |                                                                                    |                int64_t {aka long int}
+      |                                                                                    long long unsigned int
+      |                                                                                 %lu
+../aml/aml.c:280:9: warning: 'sendsize_intra' is static but used in inline function 'aml_send_intra' which is not static
+  280 |         sendsize_intra[local] += length+sizeof(struct hdri);
+      |         ^~~~~~~~~~~~~~
+../aml/aml.c:104:36: warning: 'loggroup' is static but used in inline function 'aml_send_intra' which is not static
+  104 | #define GROUP_FROM_PROC(p) ((p) >> loggroup)
+      |                                    ^~~~~~~~
+../aml/aml.c:277:22: note: in expansion of macro 'GROUP_FROM_PROC'
+  277 |         h->routing = GROUP_FROM_PROC(from);
+      |                      ^~~~~~~~~~~~~~~
+../aml/aml.c:275:46: warning: 'sendsize_intra' is static but used in inline function 'aml_send_intra' which is not static
+  275 |         char* dst = (SENDSOURCE_intra(local)+sendsize_intra[local]);
+      |                                              ^~~~~~~~~~~~~~
+../aml/aml.c:95:60: warning: 'nbuf_intra' is static but used in inline function 'aml_send_intra' which is not static
+   95 | #define SENDSOURCE_intra(node) ( sendbuf_intra+(AGGR_intra*nbuf_intra[node]) )
+      |                                                            ^~~~~~~~~~
+../aml/aml.c:275:22: note: in expansion of macro 'SENDSOURCE_intra'
+  275 |         char* dst = (SENDSOURCE_intra(local)+sendsize_intra[local]);
+      |                      ^~~~~~~~~~~~~~~~
+../aml/aml.c:95:34: warning: 'sendbuf_intra' is static but used in inline function 'aml_send_intra' which is not static
+   95 | #define SENDSOURCE_intra(node) ( sendbuf_intra+(AGGR_intra*nbuf_intra[node]) )
+      |                                  ^~~~~~~~~~~~~
+../aml/aml.c:275:22: note: in expansion of macro 'SENDSOURCE_intra'
+  275 |         char* dst = (SENDSOURCE_intra(local)+sendsize_intra[local]);
+      |                      ^~~~~~~~~~~~~~~~
+../aml/aml.c:271:33: warning: 'sendsize_intra' is static but used in inline function 'aml_send_intra' which is not static
+  271 |         int nmax = AGGR_intra - sendsize_intra[local] - sizeof(struct hdri);
+      |                                 ^~~~~~~~~~~~~~
+../aml/aml.c:265:78: warning: 'nbuf_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  265 |         tmp=activebuf_intra[index]; activebuf_intra[index]=nbuf_intra[node]; nbuf_intra[node]=tmp; //swap bufs
+      |                                                                              ^~~~~~~~~~
+../aml/aml.c:265:60: warning: 'nbuf_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  265 |         tmp=activebuf_intra[index]; activebuf_intra[index]=nbuf_intra[node]; nbuf_intra[node]=tmp; //swap bufs
+      |                                                            ^~~~~~~~~~
+../aml/aml.c:265:37: warning: 'activebuf_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  265 |         tmp=activebuf_intra[index]; activebuf_intra[index]=nbuf_intra[node]; nbuf_intra[node]=tmp; //swap bufs
+      |                                     ^~~~~~~~~~~~~~~
+../aml/aml.c:265:13: warning: 'activebuf_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  265 |         tmp=activebuf_intra[index]; activebuf_intra[index]=nbuf_intra[node]; nbuf_intra[node]=tmp; //swap bufs
+      |             ^~~~~~~~~~~~~~~
+../aml/aml.c:264:9: warning: 'acks_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  264 |         acks_intra[node] = 0;
+      |         ^~~~~~~~~~
+../aml/aml.c:263:9: warning: 'sendsize_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  263 |         sendsize_intra[node] = 0;
+      |         ^~~~~~~~~~~~~~
+../aml/aml.c:262:39: warning: 'ack_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  262 |         if (sendsize_intra[node] > 0) ack_intra++;
+      |                                       ^~~~~~~~~
+../aml/aml.c:262:13: warning: 'sendsize_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  262 |         if (sendsize_intra[node] > 0) ack_intra++;
+      |             ^~~~~~~~~~~~~~
+../aml/aml.c:261:61: warning: 'rqsend_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  261 |                         node, acks_intra[node], comm_intra, rqsend_intra+index );
+      |                                                             ^~~~~~~~~~~~
+../aml/aml.c:261:31: warning: 'acks_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  261 |                         node, acks_intra[node], comm_intra, rqsend_intra+index );
+      |                               ^~~~~~~~~~
+../aml/aml.c:260:44: warning: 'sendsize_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  260 |         MPI_Isend( SENDSOURCE_intra(node), sendsize_intra[node], MPI_CHAR,
+      |                                            ^~~~~~~~~~~~~~
+../aml/aml.c:95:60: warning: 'nbuf_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+   95 | #define SENDSOURCE_intra(node) ( sendbuf_intra+(AGGR_intra*nbuf_intra[node]) )
+      |                                                            ^~~~~~~~~~
+../aml/aml.c:260:20: note: in expansion of macro 'SENDSOURCE_intra'
+  260 |         MPI_Isend( SENDSOURCE_intra(node), sendsize_intra[node], MPI_CHAR,
+      |                    ^~~~~~~~~~~~~~~~
+../aml/aml.c:95:34: warning: 'sendbuf_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+   95 | #define SENDSOURCE_intra(node) ( sendbuf_intra+(AGGR_intra*nbuf_intra[node]) )
+      |                                  ^~~~~~~~~~~~~
+../aml/aml.c:260:20: note: in expansion of macro 'SENDSOURCE_intra'
+  260 |         MPI_Isend( SENDSOURCE_intra(node), sendsize_intra[node], MPI_CHAR,
+      |                    ^~~~~~~~~~~~~~~~
+../aml/aml.c:258:41: warning: 'rqsend_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  258 |                 MPI_Testany(NSEND_intra,rqsend_intra,&index,&flag,&stsend);
+      |                                         ^~~~~~~~~~~~
+../aml/aml.c:255:42: warning: 'acks_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  255 |         if (sendsize_intra[node] == 0 && acks_intra[node]==0 ) return;
+      |                                          ^~~~~~~~~~
+../aml/aml.c:255:13: warning: 'sendsize_intra' is static but used in inline function 'flush_buffer_intra' which is not static
+  255 |         if (sendsize_intra[node] == 0 && acks_intra[node]==0 ) return;
+      |             ^~~~~~~~~~~~~~
+../aml/aml.c:248:60: warning: 'nbuf' is static but used in inline function 'flush_buffer' which is not static
+  248 |         tmp=activebuf[index]; activebuf[index]=nbuf[node]; nbuf[node]=tmp; //swap bufs
+      |                                                            ^~~~
+../aml/aml.c:248:48: warning: 'nbuf' is static but used in inline function 'flush_buffer' which is not static
+  248 |         tmp=activebuf[index]; activebuf[index]=nbuf[node]; nbuf[node]=tmp; //swap bufs
+      |                                                ^~~~
+../aml/aml.c:248:31: warning: 'activebuf' is static but used in inline function 'flush_buffer' which is not static
+  248 |         tmp=activebuf[index]; activebuf[index]=nbuf[node]; nbuf[node]=tmp; //swap bufs
+      |                               ^~~~~~~~~
+../aml/aml.c:248:13: warning: 'activebuf' is static but used in inline function 'flush_buffer' which is not static
+  248 |         tmp=activebuf[index]; activebuf[index]=nbuf[node]; nbuf[node]=tmp; //swap bufs
+      |             ^~~~~~~~~
+../aml/aml.c:247:9: warning: 'acks' is static but used in inline function 'flush_buffer' which is not static
+  247 |         acks[node] = 0;
+      |         ^~~~
+../aml/aml.c:246:9: warning: 'sendsize' is static but used in inline function 'flush_buffer' which is not static
+  246 |         sendsize[node] = 0;
+      |         ^~~~~~~~
+../aml/aml.c:245:33: warning: 'ack' is static but used in inline function 'flush_buffer' which is not static
+  245 |         if (sendsize[node] > 0) ack++;
+      |                                 ^~~
+../aml/aml.c:245:13: warning: 'sendsize' is static but used in inline function 'flush_buffer' which is not static
+  245 |         if (sendsize[node] > 0) ack++;
+      |             ^~~~~~~~
+../aml/aml.c:244:22: warning: 'sendsize' is static but used in inline function 'flush_buffer' which is not static
+  244 |         nbytes_sent+=sendsize[node];
+      |                      ^~~~~~~~
+../aml/aml.c:243:86: warning: 'rqsend' is static but used in inline function 'flush_buffer' which is not static
+  243 |         MPI_Isend(SENDSOURCE(node), sendsize[node], MPI_CHAR,node, acks[node], comm, rqsend+index );
+      |                                                                                      ^~~~~~
+../aml/aml.c:243:68: warning: 'acks' is static but used in inline function 'flush_buffer' which is not static
+  243 |         MPI_Isend(SENDSOURCE(node), sendsize[node], MPI_CHAR,node, acks[node], comm, rqsend+index );
+      |                                                                    ^~~~
+../aml/aml.c:243:37: warning: 'sendsize' is static but used in inline function 'flush_buffer' which is not static
+  243 |         MPI_Isend(SENDSOURCE(node), sendsize[node], MPI_CHAR,node, acks[node], comm, rqsend+index );
+      |                                     ^~~~~~~~
+../aml/aml.c:94:42: warning: 'nbuf' is static but used in inline function 'flush_buffer' which is not static
+   94 | #define SENDSOURCE(node) ( sendbuf+(AGGR*nbuf[node]))
+      |                                          ^~~~
+../aml/aml.c:243:19: note: in expansion of macro 'SENDSOURCE'
+  243 |         MPI_Isend(SENDSOURCE(node), sendsize[node], MPI_CHAR,node, acks[node], comm, rqsend+index );
+      |                   ^~~~~~~~~~
+../aml/aml.c:94:28: warning: 'sendbuf' is static but used in inline function 'flush_buffer' which is not static
+   94 | #define SENDSOURCE(node) ( sendbuf+(AGGR*nbuf[node]))
+      |                            ^~~~~~~
+../aml/aml.c:243:19: note: in expansion of macro 'SENDSOURCE'
+  243 |         MPI_Isend(SENDSOURCE(node), sendsize[node], MPI_CHAR,node, acks[node], comm, rqsend+index );
+      |                   ^~~~~~~~~~
+../aml/aml.c:241:35: warning: 'rqsend' is static but used in inline function 'flush_buffer' which is not static
+  241 |                 MPI_Testany(NSEND,rqsend,&index,&flag,&stsend);
+      |                                   ^~~~~~
+../aml/aml.c:240:17: warning: 'aml_poll' is static but used in inline function 'flush_buffer' which is not static
+  240 |                 aml_poll();
+      |                 ^~~~~~~~
+../aml/aml.c:238:36: warning: 'acks' is static but used in inline function 'flush_buffer' which is not static
+  238 |         if (sendsize[node] == 0 && acks[node]==0 ) return;
+      |                                    ^~~~
+../aml/aml.c:238:13: warning: 'sendsize' is static but used in inline function 'flush_buffer' which is not static
+  238 |         if (sendsize[node] == 0 && acks[node]==0 ) return;
+      |             ^~~~~~~~
+../aml/aml.c:207:28: warning: 'rqrecv_intra' is static but used in inline function 'aml_poll_intra' which is not static
+  207 |                 MPI_Start( rqrecv_intra+index);
+      |                            ^~~~~~~~~~~~
+../aml/aml.c:205:53: warning: 'recvbuf_intra' is static but used in inline function 'aml_poll_intra' which is not static
+  205 |                         process_intra( from, length,recvbuf_intra +AGGR_intra*index);
+      |                                                     ^~~~~~~~~~~~~
+../aml/aml.c:205:25: warning: 'process_intra' is static but used in inline function 'aml_poll_intra' which is not static
+  205 |                         process_intra( from, length,recvbuf_intra +AGGR_intra*index);
+      |                         ^~~~~~~~~~~~~
+../aml/aml.c:204:33: warning: 'acks_intra' is static but used in inline function 'aml_poll_intra' which is not static
+  204 |                                 acks_intra[from]++; //normally we have delayed ack
+      |                                 ^~~~~~~~~~
+../aml/aml.c:201:28: warning: 'inbarrier' is static but used in inline function 'aml_poll_intra' which is not static
+  201 |                         if(inbarrier)
+      |                            ^~~~~~~~~
+../aml/aml.c:198:17: warning: 'ack_intra' is static but used in inline function 'aml_poll_intra' which is not static
+  198 |                 ack_intra -= status.MPI_TAG;
+      |                 ^~~~~~~~~
+../aml/aml.c:195:34: warning: 'rqrecv_intra' is static but used in inline function 'aml_poll_intra' which is not static
+  195 |         MPI_Testany( NRECV_intra,rqrecv_intra, &index, &flag, &status );
+      |                                  ^~~~~~~~~~~~
+/usr/bin/ld: /tmp/cckaScDq.o: in function `main':
+main.c:(.text.startup+0x3c4): undefined reference to `clean_shortest'
+/usr/bin/ld: main.c:(.text.startup+0x3dc): undefined reference to `run_sssp'
+/usr/bin/ld: main.c:(.text.startup+0x418): undefined reference to `clean_shortest'
+/usr/bin/ld: main.c:(.text.startup+0x430): undefined reference to `run_sssp'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:16: graph500_reference_bfs] Error 1
