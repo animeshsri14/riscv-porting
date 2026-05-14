@@ -1,0 +1,15 @@
+# Upstream source repos — large, already public, not ours to redistribute
+repos/
+
+# Build artifacts
+*.o
+*.a
+*.so
+
+# Vim swap files
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
