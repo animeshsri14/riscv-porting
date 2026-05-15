@@ -9,7 +9,7 @@
 
 ## What I Have Already Done
 
-Before writing this proposal, I set up a native RISC-V development environment (`riscv64/ubuntu:24.04` via Docker + QEMU on Apple Silicon) and ported 5 applications from the target spreadsheet across 4 different build system types. Every binary was compiled natively on RISC-V (not cross-compiled from x86), verified to execute, and validated for correctness. Full build logs, error traces, and patches are in my [porting log](https://github.com/animeshsri14/riscv-porting/blob/main/logs/porting_log.md).
+Before writing this proposal, I set up a native RISC-V development environment (`riscv64/ubuntu:24.04` via Docker + QEMU on Apple Silicon) and ported 5 applications from the target spreadsheet across 4 different build system types. Every binary was compiled natively on RISC-V (not cross-compiled from x86), verified to execute, and validated for correctness. Full build logs, error traces, and patches are in my [porting log]([https://github.com/animeshsri14/riscv-porting/blob/main/logs/porting_log.md](https://github.com/animeshsri14/riscv-porting/blob/master/logs/porting_log.md)).
 
 | # | Application | Category | Build System | Result |
 |---|-------------|----------|-------------|--------|
